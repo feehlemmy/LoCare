@@ -10,28 +10,28 @@
         <p:fieldset legend="Pacientes">
             <p:panelGrid columns="2">
                 <h:outputLabel value="Nome"></h:outputLabel>
-                <p:inputText value="#{pacientesBean.paciente.nome}"></p:inputText>
+                <p:inputText value="#{pacientesBean.paciente.nome}" required="true"></p:inputText>
                 
                 <h:outputLabel value="CPF"></h:outputLabel>
-                <p:inputMask mask="999.999.999-99" value="#{pacientesBean.paciente.cpf}"></p:inputMask>
+                <p:inputMask mask="999.999.999-99" value="#{pacientesBean.paciente.cpf}" required="true"></p:inputMask>
                 
                 <h:outputLabel value="Idade"></h:outputLabel>
-                <p:inputMask mask="99" value="#{pacientesBean.paciente.idade}"></p:inputMask>
+                <p:inputMask mask="99" value="#{pacientesBean.paciente.idade}" required="true"></p:inputMask>
                 
                 <h:outputLabel value="Telefone"></h:outputLabel>
-                <p:inputMask mask="(99)99999-9999" value="#{pacientesBean.paciente.telefone}"></p:inputMask>
+                <p:inputMask mask="(99)99999-9999" value="#{pacientesBean.paciente.telefone}" required="true"></p:inputMask>
                 
                 <h:outputLabel value="E-mail"></h:outputLabel>
-                <p:inputText value="#{pacientesBean.paciente.email}"></p:inputText>
+                <p:inputText value="#{pacientesBean.paciente.email}" required="true"></p:inputText>
                 
                 <h:outputLabel value="Senha"></h:outputLabel>
-                <p:password id="senha" value="#{pacientesBean.paciente.senha}" feedback="true"></p:password>
+                <p:password id="senha" value="#{pacientesBean.paciente.senha}" feedback="true" required="true"></p:password>
                 
                 <h:outputLabel value="Cidade"></h:outputLabel>
-                <p:inputText value="#{pacientesBean.paciente.cidade}"></p:inputText>
+                <p:inputText value="#{pacientesBean.paciente.cidade}" required="true"></p:inputText>
                 
                 <h:outputLabel value="Cartão"></h:outputLabel>
-                <p:inputMask mask="9999 9999 9999 9999" value="#{pacientesBean.paciente.numeroCartao}"></p:inputMask>
+                <p:inputMask mask="9999 9999 9999 9999" value="#{pacientesBean.paciente.numeroCartao}" required="true"></p:inputMask>
             </p:panelGrid>
             <p:commandButton value="Adicionar" action="#{pacientesBean.adicionarPaciente()}" update="@form"></p:commandButton>
             <p:dataTable value="#{pacientesBean.pacientes}" var="paciente">
